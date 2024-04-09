@@ -26,10 +26,12 @@ from django.contrib.auth import views as auth_views
 import home
 
 urlpatterns = [
-    path('', home.views.home),
+    path('', home.views.home, name='home'),
     path('register/', login.views.register),
     path('login/', auth_views.LoginView.as_view(template_name='login.html')),
-    path('logout/', auth_views.LogoutView.as_view()),
+    # path('logout', auth_views.LogoutView.as_view()),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('logout_confirmation', login.views.logout_confirmation, name='logout_confirmation'),
     path('admin/', admin.site.urls),
 
 ]
