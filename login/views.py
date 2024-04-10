@@ -18,7 +18,7 @@ def register(request):
             messages.success(request, f'Account created for {username}!')
             return redirect('home')  # Redirect to home
     else:
-        form = UserCreationForm()
+        form = CustomUserCreationForm()
     return render(request, 'register.html', {'form': form})
 
 
