@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="" href="">
-    <header> This is a place holder </header>
-</head>
+{% extends "base.html" %}
+
+{%  load static %}
+
+{%  block content %}
 <body>
     <!-- Include Poppins -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 
     <!-- Include stylesheet -->
-    <link rel="stylesheet" href="tims_style.css">
+    <link rel="stylesheet" href="../../static/css/tims_style.css">
 
     <h1> Timothy Stelmat </h1>
     <h2> Electrical Engineer </h2>
@@ -17,7 +18,7 @@
 
     <div class="container">
         <!-- Image -->
-        <img src = "images/boomer-and-noggin.jpg" alt="Picture of Boomer and Noggin, my two huskies" class="responsive-img">
+        <img src = "../../static/images/boomer-and-noggin.jpg" alt="Picture of Boomer and Noggin, my two huskies" class="responsive-img">
         <p class="portfolio-text">In a dimension where the planets of our Solar System are teeming with life and advanced civilizations, Timothy Stelmat is known not just as an Electrical and Computer Engineer, but as the chosen Guardian of Jupiter, the colossal gas giant.
 
             His story began on Earth, where Timothy’s exceptional skill in harnessing the mysteries of circuits and code was matched only by his leadership qualities and vision for the future. It was during a groundbreaking experiment with quantum communication that he discovered a hidden frequency— a signal from the heart of Jupiter.
@@ -32,7 +33,23 @@
             
             And so, as he continues his work back on Earth, one eye ever gazes outward to the celestial giant, ensuring the balance of energies and the continued prosperity of his distant, storm-wracked realm.</p>
     </div>
-    
+
+    <h2>Comments</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Past Comments</h3>
+    {% for comment in comments %}
+    <li>{{ comment.user.username }} said: {{ comment.body }} on {{ comment.created_at }}</li>
+    {% empty %}
+    <li>No comments yet.</li>
+    {% endfor %}
+
 
 </body>
+
+{% endblock %}
 </html> 
