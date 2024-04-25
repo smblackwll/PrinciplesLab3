@@ -15,13 +15,13 @@
                 <!-- Hamburger Menu Button -->
                 <button class="dropbtn">☰</button>
                 <div class="dropdown-content">
-                    <a href="/home">Sam Witte</a>
-                    <a href="/home">Spencer Blackwell</a>
-                    <a href="/home">KJ Skow</a>
-                    <a href="/home">Tim Stelmat</a>
+                    <a href="sam/">Sam Witte</a>
+                    <a href="spencer/">Spencer Blackwell</a>
+                    <a href="kj/">KJ Skow</a>
+                    <a href="tims_page/">Tim Stelmat</a>
                 </div>
             </div>
-            <div class="title">Cool Name Goes Here</div>
+            <div class="title"><a href='/'>Cool Name Goes Here</a></div>
             <div class="login-button">
                 {% if user.is_authenticated %}
                 <form action="{% url 'logout' %}" method="post">
