@@ -47,6 +47,18 @@
     font-size: 20px;
 }
 
+.title a {
+    color: white; /* Change color as needed */
+    text-decoration: none; /* Removes underline */
+    font-size: 20px; /* Adjust size as needed */
+}
+
+.title a:hover {
+    color: #ccc; /* Lighter shade for hover effect */
+    text-decoration: underline; /* Adds underline on hover for emphasis */
+}
+
+
 .login-button button {
     background-color: #4CAF50;
     color: white;
