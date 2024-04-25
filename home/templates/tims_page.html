@@ -32,7 +32,21 @@
             
             And so, as he continues his work back on Earth, one eye ever gazes outward to the celestial giant, ensuring the balance of energies and the continued prosperity of his distant, storm-wracked realm.</p>
     </div>
-    
+
+    <h2>Comments</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Past Comments</h3>
+    {% for comment in comments %}
+    <li>{{ comment.user.username }} said: {{ comment.body }} on {{ comment.created_at }}</li>
+    {% empty %}
+    <li>No comments yet.</li>
+    {% endfor %}
+
 
 </body>
 </html> 

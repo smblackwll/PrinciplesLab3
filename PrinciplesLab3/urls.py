@@ -33,5 +33,5 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('logout_confirmation', login.views.logout_confirmation, name='logout_confirmation'),
     path('admin/', admin.site.urls),
-
+    path('tim-page/', home.views.tim_page, name='tim_page'),
 ]
