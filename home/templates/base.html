@@ -23,15 +23,7 @@
             </div>
             <div class="title"><a href='/'>Cool Name Goes Here</a></div>
             <div class="login-button">
-                {% if user.is_authenticated %}
-                <form action="{% url 'logout' %}" method="post">
-                    {% csrf_token %}
-                    <button type="submit">Logout</button>
-                </form>
-                {% else %}
-                <button onclick="location.href='/register'">Register</button>
                 <button onclick="location.href='/login'">Log In</button>
-                {% endif %}
             </div>
         </div>
     </header>
