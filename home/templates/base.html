@@ -15,15 +15,23 @@
                 <!-- Hamburger Menu Button -->
                 <button class="dropbtn">☰</button>
                 <div class="dropdown-content">
-                    <a href="{% url 'home' %}">Sam Witte</a>
-                    <a href="{% url 'home' %}">Spencer Blackwell</a>
-                    <a href="{% url 'home' %}">KJ Skow</a>
-                    <a href="{% url 'home' %}">Tim "I don't care" Stelmat</a>
+                    <a href="/home">Sam Witte</a>
+                    <a href="/home">Spencer Blackwell</a>
+                    <a href="/home">KJ Skow</a>
+                    <a href="/home">Tim Stelmat</a>
                 </div>
             </div>
             <div class="title">Cool Name Goes Here</div>
             <div class="login-button">
+                {% if user.is_authenticated %}
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form>
+                {% else %}
+                <button onclick="location.href='/register'">Register</button>
                 <button onclick="location.href='/login'">Log In</button>
+                {% endif %}
             </div>
         </div>
     </header>
