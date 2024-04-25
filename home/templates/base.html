@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Cool Name Goes Here{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extrahead %}{% endblock %}
 </head>
 <body>
+    <header>
+        <div class="top-bar">
+            <div class="dropdown">
+                <!-- Hamburger Menu Button -->
+                <button class="dropbtn">☰</button>
+                <div class="dropdown-content">
+                    <a href="{% url 'home' %}">Sam Witte</a>
+                    <a href="{% url 'home' %}">Spencer Blackwell</a>
+                    <a href="{% url 'home' %}">KJ Skow</a>
+                    <a href="{% url 'home' %}">Tim "I don't care" Stelmat</a>
+                </div>
+            </div>
+            <div class="title">Cool Name Goes Here</div>
+            <div class="login-button">
+                <button onclick="location.href='/login'">Log In</button>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        {% block content %}
+        <p>This is the main content area.</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2024 Cool Name Goes Here. All rights reserved.</p>
+    </footer>
+
+    {% block extrajs %}{% endblock %}
 </body>
 </html>
