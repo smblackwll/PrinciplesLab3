@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="" href="">
-    <header> This is a place holder </header>
-</head>
+{% extends "base.html" %}
+
+{%  load static %}
+
+{%  block content %}
 <body>
     <!-- Include Poppins -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
@@ -49,4 +50,6 @@
 
 
 </body>
+
+{% endblock %}
 </html> 
