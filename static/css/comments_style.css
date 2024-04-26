@@ -1,0 +1,38 @@
+.comments-container {
+    background-color: #f0f0f0;
+    color: black;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+}
+
+.comments-container h2, .comments-container h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.comments-container form {
+    margin-top: 20px;
+}
+
+.comments-container ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.comments-container li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comments-container button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.comments-container button:hover {
+    background-color: #367c39;
+}

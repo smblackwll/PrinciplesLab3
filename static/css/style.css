@@ -48,19 +48,19 @@
 }
 
 .title a {
-    color: white; /* Change color as needed */
-    text-decoration: none; /* Removes underline */
-    font-size: 20px; /* Adjust size as needed */
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .title a:hover {
-    color: #ccc; /* Lighter shade for hover effect */
-    text-decoration: underline; /* Adds underline on hover for emphasis */
+    color: #ccc;
+    text-decoration: underline;
 }
 
 
 .login-button button {
-    background-color: #4CAF50;
+    background-color: #4caf9b;
     color: white;
     padding: 10px 20px;
     border: none;

@@ -11,6 +11,7 @@
 
     <!-- Include stylesheet -->
     <link rel="stylesheet" href="../../static/css/tims_style.css">
+    <link rel="stylesheet" href="../../static/css/comments_style.css">
 
     <h1> Timothy Stelmat </h1>
     <h2> Electrical Engineer </h2>
@@ -22,18 +23,20 @@
         <p class="portfolio-text">In a dimension where the planets of our Solar System are teeming with life and advanced civilizations, Timothy Stelmat is known not just as an Electrical and Computer Engineer, but as the chosen Guardian of Jupiter, the colossal gas giant.
 
             His story began on Earth, where Timothy’s exceptional skill in harnessing the mysteries of circuits and code was matched only by his leadership qualities and vision for the future. It was during a groundbreaking experiment with quantum communication that he discovered a hidden frequency— a signal from the heart of Jupiter.
-            
+
             Interstellar emissaries from the Jovian realms had been searching for a leader with the ability to merge technology with the elemental forces of their planet. Jupiter, with its fierce storms and magnetic fields, needed a guardian who could navigate the complexities of both electrical engineering and cosmic stewardship.
-            
+
             Upon receiving the signal, Timothy was transported through the fabric of space-time to the Jovian courts, where the Council of Moons appointed him as their leader. With his unique human perspective and engineering expertise, Timothy revolutionized the Jovian infrastructure, weaving the energy of the auroras into sustainable power grids and harmonizing the orbital dance of the moons with elegant algorithms.
-            
+
             Under his leadership, Jupiter became a powerhouse of innovation and technology, serving as a beacon of progress and a shield against cosmic threats. Timothy's name became legend: the Earth-born engineer who ascended as the Leader of Jupiter, a title that resonated across the solar winds.
-            
+
             On his portfolio page, among the descriptions of projects and achievements, there lies a special section— "Jovian Chronicles." It details his adventures across the Jovian system: from the oceanic depths of Europa to the volcanic spires of Io. Every project, every line of code he writes on Earth, echoes the harmony of the spheres he once conducted in the swirling skies of Jupiter.
-            
+
             And so, as he continues his work back on Earth, one eye ever gazes outward to the celestial giant, ensuring the balance of energies and the continued prosperity of his distant, storm-wracked realm.</p>
     </div>
 
+    {% include "comments.html" %}
+    <!--
     <h2>Comments</h2>
     <form method="post">
         {% csrf_token %}
@@ -47,9 +50,9 @@
     {% empty %}
     <li>No comments yet.</li>
     {% endfor %}
-
+    -->
 
 </body>
 
 {% endblock %}
-</html> 
+</html>

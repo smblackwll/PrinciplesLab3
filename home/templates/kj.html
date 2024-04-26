@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <link rel="stylesheet" href="../../static/css/kj_style.css">
+    <link rel="stylesheet" href="../../static/css/comments_style.css">
+
+        <h1>KJ Skow</h1>
+
+            <img src="../../static/kjphotos/IMG_3630.jpg" alt="Lulu" style="float: right; width: 200px; margin-right: 20px; margin-top: 0px;">
+            <h2>About Me</h2>
+            <p>I am the best Electrical Electrical Engineer on the team</p>
+
+            <h2>Interests/Hobbies</h2>
+            <p>words</p>
+
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Description of Project 1</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Description of Project 2</p>
+            </div>
+
+
+    {% include "comments.html" %}
+
+    {% comment %} <footer>
+        <img src="static/kjphotos/3178158.png" alt="email" style="float: left; width: 40px; margin-right: 10px; margin-top: 5px;">
+        <p>kenneth-skow@uiowa.edu</p>
+    </footer> {% endcomment %}
+</body>
+
+{% endblock %}
+
+</html>
