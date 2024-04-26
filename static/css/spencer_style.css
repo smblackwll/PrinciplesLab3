@@ -6,7 +6,7 @@ body, html {
 }
 
 header {
-    background-color: #007BFF;
+    background-color: #8208d2;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -31,4 +31,23 @@ header {
     margin-left: 20px;
     font-size: 16px;
     line-height: 1.6;
+}
+
+.button-link {
+    display: inline-block;  /* Makes it possible to set dimensions */
+    padding: 10px 20px;     /* Adds space inside the button */
+    margin: 10px;           /* Optional: Adds space outside the button */
+    background-color: #8208d2; /* Button color */
+    color: white;           /* Text color */
+    text-decoration: none;  /* Removes underline from links */
+    border-radius: 5px;     /* Optional: Rounds the corners */
+    border: none;           /* Removes the border */
+    font-size: 16px;        /* Sets the text size */
+    text-align: center;     /* Centers text inside the button */
+    cursor: pointer;        /* Changes the mouse cursor to a pointer */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button-link:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
