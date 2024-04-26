@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+{% extends "base.html" %}
+
+{%  load static %}
+
+{%  block content %}
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../static/css/tims_style.css">
+
+    <h1> Timothy Stelmat </h1>
+    <h2> Electrical Engineer </h2>
+    <h3> University of Iowa </h3>
+
+    <div class="container">
+        <img src = "../../static/images/boomer-and-noggin.jpg" alt="Picture of Boomer and Noggin, my two huskies" class="responsive-img">
+        <p class="portfolio-text">
+            I am studying Electrical Engineering at the University of Iowa and currently hold an
+            associates in Electronics Systems Technology from the Community College of the Air
+            Force. Before transferring to the University of Iowa, he did volunteer work on a CubeSAT
+            to be launched into space by NASA. Upon transferring, he has worked in the Department
+            of Neuroscience and Pharmacology, working on embedded systems and optical projects
+            for the lab. This ranges from creating a controller that helps with learning and memory
+            experiments to creating a light sealed box with RGB and IR LED functionality at specific
+            wavelengths for Optogenetic experiments. Additionally, he has been working with Dr.
+            Jui-kai (Ray) Wang as a volunteer, learning about VAE deep learning models in order to
+            help Dr. Wang in the future with Ophthalmology research using these models, which will
+            help Ophthalmologists better treat their patients. All this experience has helped him
+            gain knowledge of C, C++, Java, Python, hardware design, optical components, PCB
+            layout, schematic design, deep learning, and embedded systems.
+        </p>
+    </div>
+
+    <h2>Comments</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Past Comments</h3>
+    {% for comment in comments %}
+    <li>{{ comment.user.username }} said: {{ comment.body }} on {{ comment.created_at }}</li>
+    {% empty %}
+    <li>No comments yet.</li>
+    {% endfor %}
+
+
+</body>
+
+{% endblock %}
+</html> 
