@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+
+    <title>{% block title %}{{ section.title }}{% endblock %}</title>
+
+</head>
+
+{% block content %}
+<body>
+    <h1>Header</h1>
+    <p>I am Spencer.</p>
+
+</body>
+{% endblock %}
+</html>
