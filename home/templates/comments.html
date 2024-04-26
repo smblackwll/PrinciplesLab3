@@ -1,0 +1,20 @@
+<!-- comments.html -->
+<footer>
+    <div class="comments-container">
+        <h2>Comments</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+
+        <h3>Past Comments</h3>
+        <ul>
+            {% for comment in comments %}
+            <li>{{ comment.user.username }} said: {{ comment.body }} on {{ comment.created_at }}</li>
+            {% empty %}
+            <li>No comments yet.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</footer>
