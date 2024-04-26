@@ -13,8 +13,14 @@
 
 {% block content %}
 <body>
+    {% comment %} <link rel="stylesheet" href="../../static/css/spencer_style.css"> {% endcomment %}
+    <link rel="stylesheet" href="../../static/css/comments_style.css">
+
     <h1>Header</h1>
     <p>I am Spencer.</p>
+
+
+    {% include "comments.html" %}
 
 </body>
 {% endblock %}
