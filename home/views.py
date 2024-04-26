@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from home.forms import CommentForm
@@ -7,15 +8,23 @@ from home.models import Comment
 def home(request):
     return render(request, 'home.html')
 
+
+@login_required
 def sam(request):
     return render(request, 'sam.html')
 
+
+@login_required
 def kj(request):
     return render(request, 'kj.html')
 
+
+@login_required
 def spencer(request):
     return render(request, 'spencer.html')
 
+
+@login_required
 def tim_page(request):
     form = CommentForm()
 
@@ -31,7 +40,6 @@ def tim_page(request):
         form = CommentForm()
 
     comments = Comment.objects.filter(related_page="tim_page")
-
 
     return render(request, 'tims_page.html',
                   {'comments': comments,
