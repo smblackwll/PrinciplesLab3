@@ -12,32 +12,23 @@
     <link rel="stylesheet" href="../../static/css/kj_style.css">
     <link rel="stylesheet" href="../../static/css/comments_style.css">
 
+    <div class="container">
+        <!-- Image -->
+        <img src = "../../static/kjphotos/IMG_3630.jpg" alt="Lulu" class="responsive-img">
         <h1>KJ Skow</h1>
-
-            <img src="../../static/kjphotos/IMG_3630.jpg" alt="Lulu" style="float: right; width: 200px; margin-right: 20px; margin-top: 0px;">
-            <h2>About Me</h2>
-            <p>I am the best Electrical Electrical Engineer on the team</p>
-
-            <h2>Interests/Hobbies</h2>
-            <p>words</p>
-
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of Project 1</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of Project 2</p>
-            </div>
+        <h2>About Me:</h2>
+        <p class="portfolio-text">I am a student at the University of Iowa studying Electrical Engineering, on the electrical track. 
+            I have interned with Collins Aerospace in the Displays Panels group, supporting efforts at the systems 
+            level with a display unit’s LCD replacement and corresponding re-qualification and re-certification,
+            and at the circuit board level with the design of an Arduino controlled relay interface
+            used to bypass key panel interactions, allowing previously manual testing to be
+            automated for an entire line of display panels. This experience has allowed me to gain a
+            breadth of knowledge, specifically in hardware and schematic design, but also in FPGA
+            design and various programming languages such as C and C++.</p>
+    </div>
 
 
     {% include "comments.html" %}
-
-    {% comment %} <footer>
-        <img src="static/kjphotos/3178158.png" alt="email" style="float: left; width: 40px; margin-right: 10px; margin-top: 5px;">
-        <p>kenneth-skow@uiowa.edu</p>
-    </footer> {% endcomment %}
 </body>
 
 {% endblock %}
