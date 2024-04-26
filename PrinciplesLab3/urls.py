@@ -36,6 +36,6 @@ urlpatterns = [
     path('sam/', home.views.sam),
     path('kj/', home.views.kj),
     path('spencer/', home.views.spencer),
-    path('tim/', home.views.tim_page, name='tim_page'),
+    path('tim/', home.views.tim, name='tim'),
 
 ]
