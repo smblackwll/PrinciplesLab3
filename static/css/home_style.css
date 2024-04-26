@@ -1,0 +1,26 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(to right, #f8f9fa, #eceff1); /* Subtle grey gradient */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 48px; /* Large but not overwhelming */
+    color: #444; /* Slightly darker than body text for emphasis */
+    text-align: center; /* Centers the title for a modern look */
+    margin-top: 50px; /* Adds space above the H1 */
+    margin-bottom: 20px; /* Space below H1 before text starts */
+    font-weight: 300; /* Lighter font-weight for a refined appearance */
+}
+
+p {
+    font-size: 18px; /* Comfortable reading size */
+    color: #666; /* Lighter than H1 for hierarchy */
+    max-width: 600px; /* Optimal line length for readability */
+    margin: 20px auto; /* Centers text block horizontally, with space above and below */
+    padding: 0 10px; /* Padding on the sides for mobile responsiveness */
+    text-align: justify; /* Justified text for a clean edge and sophisticated look */
+}

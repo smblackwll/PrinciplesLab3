@@ -1,0 +1,62 @@
+body {
+    background-image: url('../images/background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+h1 {
+    color: rgb(177, 177, 177);
+    font-family: 'Poppins', sans-serif;
+    font-size: 300%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: rgb(177, 177, 177);
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    text-align: center;
+    margin-top: -1.25em;
+    margin-left: -15em;
+}
+
+h3 {
+    color: rgb(177, 177, 177);
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    text-align: center;
+    margin-top: -2.35em;
+    margin-left: 16.5em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    width: 400px; /* Container takes up full width of the parent */
+    height: auto;
+    margin: 0 auto; /* Center container itself */
+}
+
+.responsive-img {
+    max-width: 100%; /* Image can scale down */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.portfolio-text {
+    color: rgb(206, 206, 206); /* White text */
+    background-color: rgba(0, 0, 0, 0.795); /* Semi-transparent black background */
+    padding: 10px;
+    border-radius: 5px; /* Optional: adds rounded corners to the background */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 20px; /* Adjust the space between the image and text */
+    width: 200%; /* Maximum width of text for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow to the box for depth */
+}
